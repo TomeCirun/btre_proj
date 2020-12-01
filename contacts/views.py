@@ -43,15 +43,15 @@ def contact(request):
         contact.save()
 
         # Send Email
-        # send_mail(
-        # "Property Listing Inquiry",
-        # "There has been an inquiry for "
-        # + listing
-        # + ". Sign into the admin panel for more info",
-        # "cirunce@gmail.com",
-        # [realtor_email, "cirun@live.com"],
-        # fail_silently=False,
-        # )
+        send_mail(
+            "Property Listing Inquiry",
+            "There has been an inquiry for "
+            + listing
+            + ". Sign into the admin panel for more info",
+            "cirunce@gmail.com",
+            [realtor_email, "cirun@live.com"],
+            fail_silently=False,
+        )
 
         messages.success(
             request,
